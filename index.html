@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenvolvimento Web I - Fatec Araras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ======================================================================
+         CABEÇALHO DA PÁGINA (Com título e menu de navegação)
+         ====================================================================== -->
+    <header>
+        <h1>Portal Fatec Araras</h1>
+        <nav>
+            <ul>
+                <li><a href="#cadastro">Cadastro</a></li>
+                <li><a href="#processo">Processo Seletivo</a></li>
+                <li><a href="#horarios">Horários</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ======================================================================
+         CONTEÚDO PRINCIPAL (Organizado em Grid Layout)
+         ====================================================================== -->
+    <main class="container">
+
+        <!-- CARD 1: FORMULÁRIO DE CADASTRO -->
+        <section class="card card-form" id="cadastro">
+            <h2>Cadastro de Aluno</h2>
+            <form action="#" method="post">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" placeholder="Ex: João da Silva" required>
+
+                <label for="email">E-mail Acadêmico:</label>
+                <input type="email" id="email" name="email" placeholder="exemplo@fatec.sp.gov.br" required>
+
+                <label for="curso">Curso:</label>
+                <select id="curso" name="curso" required>
+                    <option value="">Selecione o curso...</option>
+                    <option value="DSM">Desenvolvimento de Software Multiplataforma</option>
+                    <option value="GE">Gestão Empresarial</option>
+                    <option value="SIT">Sistemas para Internet</option>
+                </select>
+
+                <button type="submit">Finalizar Inscrição</button>
+            </form>
+        </section>
+
+        <!-- CARD 2: LISTA ORDENADA DO PROCESSO SELETIVO -->
+        <section class="card card-lista" id="processo">
+            <h2>Passos do Processo Seletivo</h2>
+            <ol>
+                <li>Inscrição online no portal do Vestibular Fatec.</li>
+                <li>Pagamento da taxa de inscrição ou solicitação de isenção.</li>
+                <li>Realização da prova presencial de conhecimentos gerais.</li>
+                <li>Divulgação da lista de classificação e matrícula dos convocados.</li>
+            </ol>
+        </section>
+
+        <!-- CARD 3: TABELA DE DADOS DE HORÁRIOS -->
+        <section class="card card-tabela" id="horarios">
+            <h2>Grade Horária da Disciplina</h2>
+            <table class="tabela-dados">
+                <thead>
+                    <tr>
+                        <th>Dia da Semana</th>
+                        <th>Horário</th>
+                        <th>Conteúdo / Aula</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Segunda-feira</td>
+                        <td>19h00 - 20h40</td>
+                        <td>HTML5 Semântico e CSS3</td>
+                    </tr>
+                    <tr>
+                        <td>Segunda-feira</td>
+                        <td>20h50 - 22h30</td>
+                        <td>Flexbox e CSS Grid Layout</td>
+                    </tr>
+                    <tr>
+                        <td>Quarta-feira</td>
+                        <td>19h00 - 22h30</td>
+                        <td>Práticas em Laboratório & Git</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <!-- ======================================================================
+         RODAPÉ
+         ====================================================================== -->
+    <footer>
+        <p>&copy; 2026 - Fatec Araras - Superior de Tecnologia em Desenvolvimento de Software Multiplataforma</p>
+    </footer>
+
+</body>
+
+</html>

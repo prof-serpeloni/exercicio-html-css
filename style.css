@@ -1,0 +1,215 @@
+/* ==========================================================================
+   CENTRO PAULA SOUZA - FATEC ARARAS
+   CURSO: DESENVOLVIMENTO DE SOFTWARE MULTIPLATAFORMA
+   DISCIPLINA: DESENVOLVIMENTO WEB I
+   ========================================================================== */
+
+:root {
+    --fatec-vermelho: #A6192E;
+    --fatec-vermelho-hover: #821223;
+    --fatec-cinza-escuro: #2C3E50;
+    --fatec-cinza-claro: #F8F9FA;
+    --fatec-borda: #DEE2E6;
+    --fatec-texto: #333333;
+    --fonte-principal: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* --------------------------------------------------------------------------
+   1. RESETS E TIPOGRAFIA GERAL (ESTILOS PRÉ-CONFIGURADOS)
+   -------------------------------------------------------------------------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--fatec-cinza-claro);
+    color: var(--fatec-texto);
+    line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   2. CABEÇALHO (CORES E TIPOGRAFIA PRÉ-CONFIGURADAS)
+   -------------------------------------------------------------------------- */
+header {
+    background-color: var(--fatec-vermelho);
+    color: #FFFFFF;
+    padding: 20px 30px;
+    border-bottom: 4px solid var(--fatec-cinza-escuro);
+}
+
+header h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.15);
+    transition: background-color 0.2s;
+}
+
+header nav a:hover {
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+/* --------------------------------------------------------------------------
+   3. CONTAINER E CARDS (ESTILOS VISUAIS PRÉ-CONFIGURADOS)
+   -------------------------------------------------------------------------- */
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background-color: #FFFFFF;
+    border: 1px solid var(--fatec-borda);
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+    color: var(--fatec-vermelho);
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--fatec-cinza-claro);
+    padding-bottom: 10px;
+}
+
+/* --------------------------------------------------------------------------
+   4. FORMULÁRIO (CORES E TIPOGRAFIA PRÉ-CONFIGURADAS)
+   -------------------------------------------------------------------------- */
+form label {
+    font-weight: 600;
+    color: var(--fatec-cinza-escuro);
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    display: block;
+}
+
+form input[type="text"],
+form input[type="email"],
+form select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--fatec-borda);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+form button {
+    background-color: var(--fatec-vermelho);
+    color: #FFFFFF;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+form button:hover {
+    background-color: var(--fatec-vermelho-hover);
+}
+
+/* --------------------------------------------------------------------------
+   5. LISTA ORDENADA (CORES E TIPOGRAFIA PRÉ-CONFIGURADAS)
+   -------------------------------------------------------------------------- */
+ol {
+    padding-left: 20px;
+}
+
+ol li {
+    padding: 12px 15px;
+    background-color: var(--fatec-cinza-claro);
+    border-left: 4px solid var(--fatec-vermelho);
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+/* --------------------------------------------------------------------------
+   6. TABELA (CORES E TIPOGRAFIA PRÉ-CONFIGURADAS)
+   -------------------------------------------------------------------------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+table th,
+table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--fatec-borda);
+}
+
+table th {
+    background-color: var(--fatec-cinza-escuro);
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+table tr:nth-child(even) {
+    background-color: var(--fatec-cinza-claro);
+}
+
+/* --------------------------------------------------------------------------
+   7. RODAPÉ
+   -------------------------------------------------------------------------- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--fatec-cinza-escuro);
+    color: #FFFFFF;
+    font-size: 0.85rem;
+    margin-top: 40px;
+}
+
+/* ==========================================================================
+   ÁREA EXCLUSIVA DO ALUNO: POSICIONAMENTO E LAYOUT (FLEXBOX E GRID)
+   ========================================================================== */
+
+/* --- 1. Flexbox no Cabeçalho --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 12px;
+}
+
+/* --- 2. Grid Layout na Estrutura Principal (.container) --- */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+/* --- 3. Flexbox / Grid no Formulário --- */
+form {
+    display: flex;
+    flex-direction: column;
+}
